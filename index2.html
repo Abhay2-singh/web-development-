@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0 ;
+            padding: 0;
+           box-sizing: border-box;
+           font-family: 'poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 10px;
+            background-color: rgb(135, 127, 135);
+        }
+        .container{
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+        }
+        .container .title{
+            font-size: 30px;
+            font-weight: 500;
+            position: relative;
+        }
+        .container .title::before{
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            left: 0;
+            bottom: 0;
+        }
+        .container form .user-detail{
+            display: flex;
+             flex-wrap: wrap; 
+            justify-content: space-between;
+        }
+     form .user-detail .input-box{
+            width: calc(100% / 2 - 20px);
+            margin: 5px 0 12px 0  ;
+            padding: 5px;
+     }
+     .user-detail .input-box .details{
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+     }
+     .user-detail .input-box input{
+        height: 45px;
+        width: 100%;
+        outline: none;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 15px;
+        font-style:normal;
+        border-bottom-width: 2px;
+        transition: all 0 3s ease;
+     }
+     .user-detail .input-box input:focus,
+     .user-detail .input-box input:valid{
+        border-color: #9b9b9b;
+     }
+     .btn button{
+    
+        background-color: rgb(43, 43, 124);
+        border-radius: 2px;
+        box-sizing: border-box;
+        margin:6px;
+        padding: 6px;
+        height: 30px;
+        width: 100px;
+        
+     }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Admin profile</div>
+        <form action="#">
+            <div class="user-detail">
+                <div class="input-box">
+                    <span class="details">name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Admin Id</span>
+                    <input type="text" placeholder="Enter your admin id " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Admin Email</span>
+                    <input type="text" placeholder="Enter your Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Admin Contact</span>
+                    <input type="text" placeholder="Enter your Contact no" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Admin branch</span>
+                    <input type="text" placeholder="Enter your branch" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Admin Department</span>
+                    <input type="text" placeholder="Enter your Department" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Admin Insitiute</span>
+                    <input type="text" placeholder="Enter your Insitiute" required>
+                </div>
+            </div>
+        </form>
+        <div class="btn">
+            <button>update</button>
+        </div>
+    </div>
+    
+</body>
+</html>
