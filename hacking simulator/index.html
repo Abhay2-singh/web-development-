@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+       body{
+            background-color: rgb(208, 27, 208);
+            color: white;
+            font-size: 30px;
+            font-family: 'martel sans', sans-serif;
+        }
+    </style>
+
+<body>
+  <h1>hacking simulator</h1>
+    <!-- //create a hacking simulator which has green background and it show these message with random delay of 1 to 7 second   
+     initializing hacking ...
+     reading your files ... 
+     password files detected ...
+     sending all password and personal files to server ...
+     cleaning UP ...
+
+     The three dots must blink so that it look like a real terminal 
+    -->
+    <div>initializing hacking ...</div>
+    <script>
+        const addItem = async(item)=>{
+        await randomDelay();
+        let div =document.createElement("div")
+        div.innerHTML = item;
+        document.body.append(div)
+
+      }
+        const randomDelay=()=>{
+            return new Promise((resolve,reject)=>{
+                timeout=1+6*Math.random()
+                setTimeout(()=>{
+                    resolve()
+                },timeout*1000)
+            })
+
+        }
+        let text = [" initialized hack your data   ...",
+            "reading your files ...",
+            "password files detected ...",
+            "sending all password and personal"," files to server ...",
+      "cleaning UP ..." ]
+      for(const item of text)
+      {
+        addItem(item);
+      }
+     
+
+
+
+    </script>
+
+</body>
+
+</html>
